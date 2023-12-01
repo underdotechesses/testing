@@ -2,20 +2,37 @@ const title = document.querySelector(".section-forum__title");
 let firstBtn = document.querySelector(".section-forum__btn-first");
 let secondBtn = document.querySelector(".section-forum__btn-second");
 
-if (firstBtn.addEventListener("click", firstStep)) {
-    if (firstBtn.addEventListener("click", secondStep)) {
-    } else secondBtn.addEventListener("click", secondStep);
-} else if (secondBtn.addEventListener("click", firstStep)) {
-}
+firstBtn.addEventListener("click", firstStep);
+secondBtn.addEventListener("click", firstStep);
 
 function firstStep() {
     title.innerHTML = "Вы чувствуете боль?";
     firstBtn.innerHTML = "Да";
     secondBtn.innerHTML = "Нет";
+    firstBtn.addEventListener("click", secondStep);
+    secondBtn.addEventListener("click", secondStep);
 }
 
 function secondStep() {
     title.innerHTML = "Вы девственник?";
     firstBtn.innerHTML = "Да";
     secondBtn.innerHTML = "Нет";
+    firstBtn.addEventListener("click", thirdStepFirstWay);
+    secondBtn.addEventListener("click", thirdStepSecondWay);
+}
+
+function thirdStepFirstWay() {
+    title.innerHTML = "Ну ты и лузер!!!";
+    firstBtn.innerHTML = "Ну ты и лузер!!!";
+    secondBtn.innerHTML = "Ну ты и лузер!!!";
+    firstBtn.addEventListener("click", thirdStepFirstWay);
+    secondBtn.addEventListener("click", thirdStepFirstWay);
+}
+
+function thirdStepSecondWay() {
+    title.innerHTML = "Отвечайте честно!";
+    firstBtn.innerHTML = "Окей, я девственник";
+    secondBtn.innerHTML = "";
+    firstBtn.addEventListener("click", thirdStepFirstWay);
+    secondBtn.addEventListener("click", thirdStepFirstWay);
 }
