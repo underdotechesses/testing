@@ -1,5 +1,4 @@
 const title = document.querySelector(".section-forum__title");
-const myTimer = setTimeout();
 let firstBtn = document.querySelector(".section-forum__btn-first");
 let secondBtn = document.querySelector(".section-forum__btn-second");
 
