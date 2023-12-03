@@ -23,8 +23,8 @@ function secondStep() {
 
 function thirdStepFirstWay() {
     title.innerHTML = "Ну ты и лузер!!!";
-    firstBtn.innerHTML = "Ну ты и лузер!!!";
-    secondBtn.innerHTML = "Ну ты и лузер!!!";
+    firstBtn.className = "hidden";
+    secondBtn.className = "hidden";
     firstBtn.addEventListener("click", thirdStepFirstWay);
     secondBtn.addEventListener("click", thirdStepFirstWay);
 }
@@ -32,7 +32,7 @@ function thirdStepFirstWay() {
 function thirdStepSecondWay() {
     title.innerHTML = "Отвечайте честно!";
     firstBtn.innerHTML = "Окей, я девственник";
-    secondBtn.innerHTML = "";
+    secondBtn.className = "hidden";
     firstBtn.addEventListener("click", thirdStepFirstWay);
     secondBtn.addEventListener("click", thirdStepFirstWay);
 }
